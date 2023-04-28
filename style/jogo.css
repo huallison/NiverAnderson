@@ -1,0 +1,24 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    transition: all 0.4s;
+
+    background-image: url("../img/fundoGame.jpg");
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: 600vw 1080px;
+}
+
+
+#player > img{
+    width: 180px;
+}
+
+#player{
+    width: 180px;
+    position: absolute;
+    left: 20px;
+    bottom: -50px;
+}

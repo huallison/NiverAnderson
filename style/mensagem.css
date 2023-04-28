@@ -1,0 +1,33 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-image: url("../img/fundoMensagem.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text{
+    background-image: url("../img/men1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 580px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: 0px 0px 20px 330px;
+}
+
+.text > p{
+    font-size: 25pt;
+    font-weight: 800;
+}

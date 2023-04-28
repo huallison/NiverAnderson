@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Character Movement Script</title>
+    <link rel="stylesheet" href="../style/jogo.css">
+</head>
+<body>
+
+<div id="player">
+    <img src="../img/frente.png" alt="character" id="character">
+</div>
+
+<script>
+
+var horizontalAxisX = 0;
+var verticalAxisY = 0;
+var moviX = 20
+var pixels = "px";
+var img = "../img/frente.png"
+var character = document.getElementById("character").src
+
+window.addEventListener("keydown", playerMovement);
+
+function playerMovement() {
+    var player = window.document.getElementById("character");
+    var key = event.keyCode;
+    console.log(key)
+    if (key == 65) {
+
+        if (character !== "../img/esquerda.png"){
+            document.getElementById("character").src = "../img/esquerda.png"
+        }
+
+
+        if (moviX > 20 && horizontalAxisX > 0){
+            moviX -= 30
+            if(moviX < 0){
+                moviX = 0
+            }
+            player.style.marginLeft = moviX + pixels;
+        }else{
+            horizontalAxisX += -4;
+            if(horizontalAxisX < 0){
+                horizontalAxisX = 0
+            }
+        }
+        document.body.style.backgroundPosition = `${horizontalAxisX}%`
+
+    }
+
+    else if (key == 68) {
+
+        if (character !== "../img/direita.png"){
+            document.getElementById("character").src = "../img/direita.png"
+        }
+
+        horizontalAxisX += 4;
+        if(horizontalAxisX > 100){
+            horizontalAxisX = 100;
+            moviX += 30
+            if(moviX > 1710){
+                moviX = 1710
+            }
+            player.style.marginLeft = moviX + pixels;
+            
+            
+        }
+        document.body.style.backgroundPosition = `${horizontalAxisX}%`
+    }
+    else if (key == 87){
+        if (character !== "../img/tras.png"){
+            document.getElementById("character").src = "../img/tras.png"
+        }
+    }
+    else if (key == 83){
+        if (character !== "../img/frente.png"){
+            document.getElementById("character").src = "../img/frente.png"
+        }
+    }
+
+}
+
+</script>
+
+</body>
+</html>

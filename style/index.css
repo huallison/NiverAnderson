@@ -1,0 +1,39 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/FundoIndex.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.logo > img{
+    width: 1000px;
+    animation: 5s logoMove ease;
+    margin-bottom: 20px;
+}
+
+.options{
+    display: flex;
+    gap: 50px;
+}
+.options > a > img{
+    width: 200px;
+}
+
+@keyframes logoMove {
+    0%{
+        margin-bottom: 1000px;
+    }
+
+    100%{
+        margin-bottom: 20px;
+    }
+}
